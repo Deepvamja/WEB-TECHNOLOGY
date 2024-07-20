@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="uname" placeholder="minimun 8 characters">
+    <input type="text" id="psword" placeholder="enter password">
+    <input type="text" id="repsword" placeholder="repassword">
+    <input type="text" id="mail" placeholder="email">
+    <input type="text" id="enroll" placeholder="enrollnment no">
+
+    <button onclick="validateform()">Submit</button>
+    <script>
+          function validateform(){
+            var uname = document.getElementById('uname').value;
+            var psword = document.getElementById('psword').value;
+            var repsword = document.getElementById('repsword').value;
+            var mail = document.getElementById('mail').value;
+            var enroll = document.getElementById('enroll').value;
+            if(uname.length<8){
+                alert("uname is invalid");
+            }
+
+           
+            var pattern = /[!@#$%*^]{1,}[0-9]{1,}/;
+            var regex = new RegExp(pattern);
+
+            if(!regex.test(psword)){
+                alert("password is invalid");
+            }
+            if(psword.length<8 && psword.length>12){
+                alert("password must be of 8 to 12 characters")
+            }
+            if(repsword!=psword){
+                alert("password and repassword must be same")
+            }
+            if(!mail.inclues("@")){
+                alert("email does contain @");
+            }
+            if(enroll.length<11){
+                alert("enrollnment must contain 11 digits")
+            }
+          }
+    </script>
+</body>
+</html>

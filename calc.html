@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body style="background-color: rgb(243, 198, 139);">
+    <table border="2px solid black" align="center" id="calc">
+        <tr>
+            <td style="background-color:  white;" colspan="5" id="ans" height="20px;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="addno('7')"></td>
+            <td><input type="button" value="8" onclick="addno('8')"></td>
+            <td><input type="button" value="9" onclick="addno('9')"></td>
+            <td><input type="button" value="+" onclick="addno('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="addno('4')"></td>
+            <td><input type="button" value="5" onclick="addno('5')"></td>
+            <td><input type="button" value="6" onclick="addno('6')"></td>
+            <td><input type="button" value="-" onclick="addno('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="3" onclick="addno('3')"></td>
+            <td><input type="button" value="2" onclick="addno('2')"></td>
+            <td><input type="button" value="1" onclick="addno('1')"></td>
+            <td><input type="button" value="*" onclick="addno('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="*" onclick="addno('0')"></td>
+            <td><input type="button" value="." onclick="addno('.')"></td>
+            
+            <td><input type="button" value="=" onclick="equal()"></td>
+            <td><input type="button" value="C" onclick="del()"></td>
+            <td><input type="button" value="back" onclick="bck('back')"></td>
+
+
+        </tr>
+    </table>
+    <script>
+        function addno(value){
+            var text = document.getElementById('ans').innerHTML+=value;
+        }
+        function del(){
+            var txt = document.getElementById('ans').innerHTML=""
+
+        }
+        function bck(){
+            var text = document.getElementById('ans').innerHTML
+            document.getElementById('ans').innerHTML=text.substring(0,text.length-1)
+
+
+        }
+        function equal (){
+            var texts = document.getElementById('ans').innerHTML
+            var res = eval(texts);
+            document.getElementById('ans').innerHTML=res;
+
+        }
+
+    </script>
+</body>
+</html>
