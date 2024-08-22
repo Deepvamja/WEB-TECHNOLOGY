@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const schema = mongoose.Schema({
-    Facultyname:String,
-    Facultydepartment:String,
-    Facultyage:Number
+    id:Number,
+    name:String,
+  
 
 });
 
