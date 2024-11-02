@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	
+    <script type="text/javascript"> 
+        function up() 
+        { 
+            document.getElementById("gfg").style.backgroundColor="red"; 
+            
+        } 
+        let ups = setInterval(up,5000)
+        function down() 
+        { 
+            document.getElementById("gfg").style.backgroundColor="green" 
+            
+        } 
+        let down = setInterval(down,5000)
+        
+    </script> 
+    <p id="gfg" onmouseup="up()" onmousedown="down()">Hello</p>
+    
+    
+</body>
+</html>
